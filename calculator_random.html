@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>Aleatory adder... <span id='op'></span><span id="res"></span><a href="javascript:aleat('op', 'res')">New!</a></p>
+  </body>
+  <script type="text/javascript">
+    function changer (id, newValue) {
+      var element = document.getElementById(id);
+      element.innerHTML = newValue;
+    }
+    function aleat(idOp, idRes){
+      var num1 = Math.floor(Math.random()*100);
+      var num2 = Math.floor(Math.random()*100);
+      var numResult = num1 + num2;
+      var textadd = num1 + " + " + num2;
+      var textresult = " = " + numResult;
+      changer(idOp, textadd)
+      changer(idRes, textresult)
+    }
+
+  </script>
+</html>
